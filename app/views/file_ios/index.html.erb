@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+<%= form_tag '/create_pdf' do %>
+  <div class="inputs">
+    <label for="_create_pdf_title">Title</label>
+    <%= text_field_tag :title, nil, required: true %>
+  </div>
+  <div class="inputs">
+    <label for="_create_pdf_content">Content</label>
+    <%= text_area_tag :content, nil, required: true, cols: 20, rows: 4 %><br>
+  </div>
+  <div class="actions">
+    <%= submit_tag 'Submit' %>
+  </div>
+<% end %>
